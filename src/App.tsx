@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
 
 function App() {
-  return (
-    <></>
-  );
+	return (
+		<>
+			<div className='one'>BBe</div>
+			<div className='two'>BBe</div>
+		</>
+	);
 }
 
 export default App;
