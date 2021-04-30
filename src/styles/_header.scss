@@ -1,0 +1,64 @@
+header {
+	color: white;
+	padding: 1rem 1.5rem;
+	border-radius: 1.25rem;
+	border: 0.2rem solid $Header-Outline;
+	width: 60rem;
+	margin: auto;
+	font-family: "BarlowSemiCondensed-Bold";
+	position: relative;
+	z-index: 1;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.score {
+		width: 11rem;
+		height: 9rem;
+		background-color: white;
+		border-radius: 0.75rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		small {
+			color: $Score-Text;
+			font-size: 1em;
+			text-transform: uppercase;
+			letter-spacing: 0.125rem;
+		}
+
+		span {
+			font-size: 5.5em;
+			color: $Dark-Text;
+		}
+	}
+
+	@media (max-width: $md) {
+		width: 80%;
+	}
+	@media (max-width: $sm) {
+		width: 90%;
+		border-radius: 0.5rem;
+		padding-right: 1rem;
+		img.logo {
+			width: 10rem;
+		}
+		.score {
+			width: 25%;
+			height: 7.5rem;
+			border-radius: 0.375rem;
+		}
+	}
+	@media (max-width: $xs) {
+		img.logo {
+			width: 7rem;
+		}
+		.score {
+			width: 6rem;
+			height: 5rem;
+		}
+	}
+}

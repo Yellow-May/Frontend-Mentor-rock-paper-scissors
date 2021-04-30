@@ -1,23 +1,103 @@
-@font-face {
-	font-family: "BarlowSemiCondensed-Bold";
-	src: local("BarlowSemiCondensed"),
-		url("./../fonts/BarlowSemiCondensed/BarlowSemiCondensed-Bold.ttf")
-			format("truetype");
-	font-weight: 700;
-}
+@import "base";
 
-@font-face {
-	font-family: "BarlowSemiCondensed-SemiBold";
-	src: local("BarlowSemiCondensed"),
-		url("./../fonts/BarlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf")
-			format("truetype");
-	font-weight: 600;
-}
+body {
+	font-size: 1rem;
+	background: radial-gradient($Radial-Gradient-I, $Radial-Gradient-II)
+		no-repeat;
+	padding: 2rem 0;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
 
-.one {
-	font-family: "BarlowSemiCondensed-SemiBold";
-}
+	@media (max-width: $md) {
+		font-size: 0.875rem;
+	}
+	@media (max-width: $sm) {
+		font-size: 0.75rem;
+	}
+	@media (max-width: $xs) {
+		font-size: 0.55rem;
+		overflow: hidden;
+	}
 
-.two {
-	font-family: "BarlowSemiCondensed-Bold";
+	@import "modal";
+
+	@import "header";
+
+	main {
+		.circle {
+			background-color: $Radial-Gradient-II;
+			border-radius: 50%;
+
+			span {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: rgb(153, 153, 153);
+				border-radius: 50%;
+				box-shadow: 0 0 1rem black;
+			}
+
+			button.btn-play {
+				height: 100%;
+				width: 100%;
+				border-style: solid;
+				background-color: white;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 50%;
+				cursor: pointer;
+				outline: none;
+				border-radius: 50%;
+			}
+
+			&.paper button.btn-play {
+				background-image: url(./../images/icon-paper.svg);
+				border-color: $Paper-Gradient-I;
+				box-shadow: inset 0 0.5rem 0rem rgba(black, 0.25),
+					0 0.75rem 0 rgba($Paper-Gradient-II, 0.5);
+			}
+
+			&.scissors button.btn-play {
+				background-image: url(./../images/icon-scissors.svg);
+				border-color: $Scissors-Gradient-I;
+				box-shadow: inset 0 0.5rem 0rem rgba(black, 0.25),
+					0 0.75rem 0 rgba($Scissors-Gradient-II, 0.5);
+			}
+
+			&.rock button.btn-play {
+				background-image: url(./../images/icon-rock.svg);
+				border-color: $Rock-Gradient-I;
+				box-shadow: inset 0 0.5rem 0rem rgba(black, 0.25),
+					0 0.75rem 0 rgba($Rock-Gradient-II, 0.5);
+			}
+		}
+
+		@import "./main/pick";
+
+		@import "./main/reveal";
+	}
+
+	button.rules-btn {
+		position: absolute;
+		bottom: 2rem;
+		right: 2rem;
+		outline: none;
+		background: transparent;
+		color: white;
+		padding: 0.65rem 2rem;
+		border: thin solid;
+		border-radius: 0.5rem;
+		font-size: 1em;
+		letter-spacing: 0.125rem;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		@media (max-width: $xs) {
+			bottom: 0.75rem;
+			right: 0.75rem;
+		}
+	}
 }

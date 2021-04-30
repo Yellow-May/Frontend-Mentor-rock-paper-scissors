@@ -1,0 +1,143 @@
+.reveal {
+	width: 100%;
+	height: auto;
+	overflow-x: clip;
+	padding-top: 5.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.side {
+		margin: 0 5.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		span.text {
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: "BarlowSemiCondensed-SemiBold";
+			font-size: 1.375rem;
+			letter-spacing: 0.125rem;
+			margin-bottom: 4rem;
+			display: block;
+		}
+
+		.circle {
+			position: relative;
+
+			.btn-play {
+				cursor: default;
+			}
+
+			&.blank {
+				transform: scale(0.85);
+
+				.btn-play {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.mid {
+		margin-top: 5rem;
+		padding: 0 1.5rem;
+
+		span.text {
+			font-family: "BarlowSemiCondensed-Bold";
+			font-size: 3.5rem;
+			color: white;
+			text-transform: uppercase;
+			letter-spacing: 0.125rem;
+			display: block;
+			padding: 0 1.5rem;
+		}
+
+		button.play-btn {
+			background-color: white;
+			color: $Radial-Gradient-II;
+			font-family: "BarlowSemiCondensed-SemiBold";
+			font-weight: 400;
+			font-size: 1rem;
+			letter-spacing: 0.125rem;
+			padding: 0.75rem;
+			width: 100%;
+			outline: none;
+			border: none;
+			border-radius: 0.25rem;
+			cursor: pointer;
+			margin-top: 1.5rem;
+			text-transform: uppercase;
+			transition: 0.25s;
+
+			&:hover {
+				color: #f14;
+			}
+		}
+	}
+
+	@media (max-width: $md) {
+		position: relative;
+
+		.mid {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: 0;
+
+			span.text {
+				padding: 0;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	@media (max-width: $sm) {
+		.mid {
+			margin-top: 1rem;
+		}
+
+		.side {
+			margin: 0 1.5rem;
+		}
+	}
+
+	@media (max-width: $xs) {
+		padding: 0;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		.side {
+			flex-direction: column-reverse;
+			max-width: 50%;
+			margin: 0;
+
+			span.text {
+				margin-top: 2rem;
+				margin-bottom: 0;
+			}
+
+			.circle {
+				transform: scale(0.7);
+
+				&.blank {
+					transform: scale(0.6);
+				}
+			}
+		}
+
+		.mid {
+			margin-top: 5rem;
+
+			button.play-btn {
+				padding: 1rem;
+			}
+		}
+	}
+}

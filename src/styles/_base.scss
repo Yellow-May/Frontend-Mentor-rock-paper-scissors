@@ -1,0 +1,53 @@
+//# Primary
+$Scissors-Gradient-I: hsl(39, 89%, 49%);
+$Scissors-Gradient-II: hsl(40, 84%, 53%);
+$Paper-Gradient-I: hsl(230, 89%, 62%);
+$Paper-Gradient-II: hsl(230, 89%, 65%);
+$Rock-Gradient-I: hsl(349, 71%, 52%);
+$Rock-Gradient-II: hsl(349, 70%, 56%);
+$Lizard-Gradient-I: hsl(261, 73%, 60%);
+$Lizard-Gradient-II: hsl(261, 72%, 63%);
+$Cyan-I: hsl(189, 59%, 53%);
+$Cyan-II: hsl(189, 58%, 57%);
+
+//# Neutral
+$Dark-Text: hsl(229, 25%, 31%);
+$Score-Text: hsl(229, 64%, 46%);
+$Header-Outline: hsl(217, 16%, 45%);
+
+//# Background
+$Radial-Gradient-I: hsl(214, 47%, 23%);
+$Radial-Gradient-II: hsl(237, 49%, 15%);
+
+// Reset
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+// Fonts
+@font-face {
+	font-family: "BarlowSemiCondensed-Bold";
+	src: local("BarlowSemiCondensed"),
+		url("./../fonts/BarlowSemiCondensed/BarlowSemiCondensed-Bold.ttf")
+			format("truetype");
+	font-weight: 700;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "BarlowSemiCondensed-SemiBold";
+	src: local("BarlowSemiCondensed"),
+		url("./../fonts/BarlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf")
+			format("truetype");
+	font-weight: 600;
+	font-display: block;
+}
+
+// Sizes
+$xs: 480px;
+$sm: 758px;
+$md: 960px;
