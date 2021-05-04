@@ -27,7 +27,7 @@ const Circle = (props: {
 						}}></span>
 				))}
 			<button
-				title={props.type}
+				title={`select ${props.type}`}
 				onClick={() => props.event && props.event(props.type)}
 				className='btn-play'
 				style={{
