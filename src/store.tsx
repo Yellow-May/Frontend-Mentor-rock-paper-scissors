@@ -1,5 +1,5 @@
 import React from "react";
-import Reducer from "./Reducer";
+import Reducer from "./reducer";
 
 export const initialState = {
 	score: 0,
